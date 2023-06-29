@@ -36,7 +36,6 @@ let next = document.querySelector('.pictures-full .image-full img:nth-child(3)')
 let previous = document.querySelector('.pictures-full .image-full img:nth-child(2)');
 let closeFullImages = document.querySelector('.pictures-full .image-full .close');
 
-
 imgs.forEach((img) => {
     img.addEventListener('click', function() {
         
@@ -46,16 +45,14 @@ imgs.forEach((img) => {
         img.classList.add('active')
         
         if(img === imgsParent.children[1]) {
-            theMainImg.innerHTML = `<img src=${images[1]}>`;
+            theMainImg.children[0].src = images[1]
         }else if(img === imgsParent.children[2]) {
-            theMainImg.innerHTML = `<img src=${images[2]}>`;
+            theMainImg.children[0].src = images[2]
         }else if(img === imgsParent.children[3]) {
-            theMainImg.innerHTML = `<img src=${images[3]}>`;
+            theMainImg.children[0].src = images[3]
         }else if(img === imgsParent.children[0]) {
-            theMainImg.innerHTML = `<img src=${images[0]}>`;
+            theMainImg.children[0].src = images[0]
         }
-        
-        // theMainImg.innerHTML = `<img src=${images[2]}>`;
     })
 })
 
@@ -68,7 +65,6 @@ closeFullImages.addEventListener('click', function() {
 })
 
 
-
 allFullImages.forEach((img) => {
     img.addEventListener('click', _ => {
 
@@ -78,16 +74,25 @@ allFullImages.forEach((img) => {
         img.classList.add('active');
 
         if(img === otherFullImages.children[1]) {
-            activeFullImage.innerHTML = `<img src=${images[1]}>`;
+            activeFullImage.children[0].src = images[1]
         }else if(img === otherFullImages.children[2]) {
-            activeFullImage.innerHTML = `<img src=${images[2]}>`;
+            activeFullImage.children[0].src = images[2]
         }else if(img === otherFullImages.children[3]) {
-            activeFullImage.innerHTML = `<img src=${images[3]}>`;
+            activeFullImage.children[0].src = images[3]
         }else if(img === otherFullImages.children[0]) {
-            activeFullImage.innerHTML = `<img src=${images[0]}>`;
+            activeFullImage.children[0].src = images[0]
         }
     })
 })
+ // if(img === otherFullImages.children[1]) {
+        //     activeFullImage.innerHTML = `<img src=${images[1]}>`;
+        // }else if(img === otherFullImages.children[2]) {
+        //     activeFullImage.innerHTML = `<img src=${images[2]}>`;
+        // }else if(img === otherFullImages.children[3]) {
+        //     activeFullImage.innerHTML = `<img src=${images[3]}>`;
+        // }else if(img === otherFullImages.children[0]) {
+        //     activeFullImage.innerHTML = `<img src=${images[0]}>`;
+        // }
 
 let i = 0;
 next.addEventListener('click', function(e) {
@@ -171,27 +176,37 @@ let ind = 0;
 nextForMobile.addEventListener('click', function(e) {
     if(ind > -1 && ind < 4) {
         if(ind == 3) {
-            ind;
+            // nextForMobile.classList.add('no-image');
+            parentImageMobile.children[0].src = images[ind];
         }else {
             ind++;
+            parentImageMobile.children[0].src = images[ind];
         }
-        parentImageMobile.innerHTML = `<img src="${images[ind]}">`;
     }else {
         e.preventDefault();
     }
+    // if(ind == 3) {
+    //     nextForMobile.addEventListener('mouseleave', () => nextForMobile.classList.remove('no-image'))
+    //     nextForMobile.addEventListener('mouseenter', () => nextForMobile.classList.add('no-image'))
+    // }
 })
 
 previousForMobile.addEventListener('click', function(e) {
     if(ind > -1 && ind < 4) {
         if (ind == 0) {
-            parentImageMobile.innerHTML = `<img src="${images[ind]}">`;
+            // previousForMobile.classList.add('no-image');
+            parentImageMobile.children[0].src = images[ind];
         }else {
             ind--;
-            parentImageMobile.innerHTML = `<img src="${images[ind]}">`;
+            parentImageMobile.children[0].src = images[ind];
         }
     }else {
         e.preventDefault();
     }
+    // if(ind == 0) {
+    //     previousForMobile.addEventListener('mouseleave', () => previousForMobile.classList.remove('no-image'))
+    //     previousForMobile.addEventListener('mouseenter', () => previousForMobile.classList.add('no-image'))
+    // }
 })
 
 
@@ -294,5 +309,5 @@ iconMenu.addEventListener('click', function() {
 });
 
 closeBtn.addEventListener('click', function() {
-    sidebar.style.display = 'none'
+    sidebar.style.display = 'none';
 })
