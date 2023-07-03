@@ -84,15 +84,6 @@ allFullImages.forEach((img) => {
         }
     })
 })
- // if(img === otherFullImages.children[1]) {
-        //     activeFullImage.innerHTML = `<img src=${images[1]}>`;
-        // }else if(img === otherFullImages.children[2]) {
-        //     activeFullImage.innerHTML = `<img src=${images[2]}>`;
-        // }else if(img === otherFullImages.children[3]) {
-        //     activeFullImage.innerHTML = `<img src=${images[3]}>`;
-        // }else if(img === otherFullImages.children[0]) {
-        //     activeFullImage.innerHTML = `<img src=${images[0]}>`;
-        // }
 
 let i = 0;
 next.addEventListener('click', function(e) {
@@ -126,7 +117,6 @@ next.addEventListener('click', function(e) {
             }
             
         }
-        console.log(i)
     }
 })
 
@@ -185,10 +175,6 @@ nextForMobile.addEventListener('click', function(e) {
     }else {
         e.preventDefault();
     }
-    // if(ind == 3) {
-    //     nextForMobile.addEventListener('mouseleave', () => nextForMobile.classList.remove('no-image'))
-    //     nextForMobile.addEventListener('mouseenter', () => nextForMobile.classList.add('no-image'))
-    // }
 })
 
 previousForMobile.addEventListener('click', function(e) {
@@ -203,10 +189,6 @@ previousForMobile.addEventListener('click', function(e) {
     }else {
         e.preventDefault();
     }
-    // if(ind == 0) {
-    //     previousForMobile.addEventListener('mouseleave', () => previousForMobile.classList.remove('no-image'))
-    //     previousForMobile.addEventListener('mouseenter', () => previousForMobile.classList.add('no-image'))
-    // }
 })
 
 
