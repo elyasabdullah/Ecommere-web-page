@@ -11,6 +11,7 @@ This Project was a challenging one because it was my first project working with 
 
 
 
-![FireShot Capture 082 - ecommerce-product-page - ](https://github.com/elyasabdullah/Ecommere-web-page/assets/99258943/76efd122-58e6-4d46-a098-7bd229088409)
+![FireShot Capture 052 - ecommerce-product-page - 127 0 0 1](https://github.com/elyasabdullah/Ecommere-web-page/assets/99258943/287f7ba1-0788-4c97-adff-85925e8130f7)
+
 
 
